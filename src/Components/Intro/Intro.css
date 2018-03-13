@@ -6,28 +6,13 @@
 }
 
 
-/*.display-image{*/
-    /*!* make a square container *!*/
-    /*width: 150px;*/
-    /*height: 150px;*/
-
-    /*!* fill the container, preserving aspect ratio, and cropping to fit *!*/
-    /*background-size: cover;*/
-
-    /*!* center the image vertically and horizontally *!*/
-    /*background-position: top center;*/
-
-    /*!* round the edges to a circle with border radius 1/2 container size *!*/
-    /*border-radius: 50%;*/
-/*}*/
-
-
 .display-image {
     position: relative;
     width: 150px;
     height: 150px;
     overflow: hidden;
-    border-radius: 50%
+    border-radius: 50%;
+    margin: auto;
 }
 .display-image img {
     position: absolute;
