@@ -2,7 +2,7 @@ import React from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import './Intro.css';
 import dp from '../../assets/img/dp.jpg';
-import {Row, Col} from 'reactstrap';
+import {Col} from 'reactstrap';
 
 const intro = () => {
     return (
@@ -14,26 +14,26 @@ const intro = () => {
                 offsetYMin={-20}
                 slowerScrollRate
                 className="back-body">
-                <div>HI</div>
-                <div className="display-image">
-                    <img src={dp} alt="dp"/>
-                </div>
+                <Col style={{paddingTop: "20px"}}>
+                    <div className="display-image">
+                        <img src={dp} alt="dp"/>
+                    </div>
+
+                    <div>
+                        <h1>Hello World!</h1>
+                    </div>
+
+                </Col>
+
                 <Parallax
                     offsetYMax={0}
                     offsetYMin={-200}
-                    slowerScrollRate>
-
-
-                </Parallax>
-
-
-                <Parallax
-                    offsetXMax={30}
-                    offsetXMin={-30}
                     slowerScrollRate
                 >
-TEST
+
+                    asdadasdasd asdasdas
                 </Parallax>
+
             </Parallax>
 
         </div>
