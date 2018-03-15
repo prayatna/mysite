@@ -27,18 +27,29 @@ const intro = () => {
 
                 <Parallax
                     offsetYMax={0}
-                    offsetYMin={-200}
+                    offsetYMin={-50}
                     slowerScrollRate
                 >
+                    <div>
+                        <h6>
+                            I'm Prayatna Bhattarai currently exploring the world of
+                            ReactJS. If you like to know more about me feel free
+                            to visit my social sites. And please do check out my projects
+                            below which I developed during my uni days.
+                        </h6>
 
-                    asdadasdasd asdasdas
+                    </div>
                 </Parallax>
 
             </Parallax>
 
+
+
         </div>
 
     );
-}
+};
+
+
 
 export default intro
