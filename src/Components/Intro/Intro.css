@@ -1,7 +1,5 @@
 .back-body{
-    /*background:linear-gradient(#cffaff,#94c0ff) ;*/
     background: linear-gradient(to bottom, #e7eff6 0%, #adcbe3 100%);
-    /*background: url("https://cdn.pixabay.com/photo/2018/01/01/16/05/nature-3054445_1280.jpg");*/
     height: 100vh;
     font-family: "Cabin Sketch";
 }
@@ -24,5 +22,19 @@
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
+}
+
+.ban{
+    position: absolute;
+    background-color: rgba(176, 204, 227, 0.5);
+    user-select: none;
+    pointer-events: none;
+    padding: 50px;
+
+    /*not yet responsive*/
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
