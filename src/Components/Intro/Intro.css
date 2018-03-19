@@ -63,19 +63,33 @@
 }
 
 .icons {
-    font-size: 30px;
+    font-size: 50px;
+    padding:10px;
     margin: 5px;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    color: #222222;
 }
 
 .icons:hover {
-    font-size: 40px;
+    font-size: 70px;
     transform: rotate(45deg);
 }
 
-.icons-linkedin {
-    color: #12c3e2;
+.icons-linkedin:hover {
+    color: #007bb5;
 }
+
+.icons-github:hover {
+    color: #767676;
+}
+
+.icons-instagram:hover {
+    color: #8a3ab9;
+ }
+
+.icons-cv:hover {
+      color: #00592D;
+  }
 
 

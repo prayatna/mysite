@@ -96,34 +96,31 @@ const intro = () => {
                 <p>My name is </p>
                 <h2>Prayatna Bhattarai</h2>
                 <p>and I'm aspiring to become a full stack developer.</p>
-                <span>
+                <div>
 
-                    <FontAwesomeIcon icon={linkedIn} className="icons icons-linkedin"/>
+                    <a href="https://www.github.com/prayatna">
 
-                </span>
+                        <FontAwesomeIcon icon={github} className="icons icons-github"/>
 
-                <a href="https://www.github.com/prayatna">
+                    </a>
 
-                    <FontAwesomeIcon icon={github}/>
+                    <a href="https://www.linkedin.com/in/prayatnabhattarai">
 
-                </a>
+                        <FontAwesomeIcon icon={linkedIn} className="icons icons-linkedin"/>
 
-                <a href="https://www.linkedin.com/in/prayatnabhattarai">
+                    </a>
 
-                    <FontAwesomeIcon icon={linkedIn} className="icons icons-linkedin"/>
+                    <a href="https://www.instagram.com/prayatna">
 
-                </a>
+                        <FontAwesomeIcon icon={insta} className="icons icons-instagram"/>
 
-                <a href="https://www.instagram.com/prayatna">
+                    </a>
+                    <a href="https://www.linkedin.com/in/prayatnabhattarai">
 
-                    <FontAwesomeIcon icon={insta}/>
+                        <FontAwesomeIcon icon={downloadCv} className="icons icons-cv"/>
 
-                </a>
-                <a href="https://www.linkedin.com/in/prayatnabhattarai">
-
-                    <FontAwesomeIcon icon={downloadCv}/>
-
-                </a>
+                    </a>
+                </div>
 
 
             </div>
