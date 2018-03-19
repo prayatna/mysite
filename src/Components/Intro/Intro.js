@@ -28,10 +28,10 @@ const intro = () => {
                 params={{
                     particles: {
                         number: {
-                            value: 100,
+                            value: 20,
                             density: {
-                                enable: false,
-                                value_area: 500
+                                enable: true,
+                                value_area: 900
                             }
                         },
                         color: {
