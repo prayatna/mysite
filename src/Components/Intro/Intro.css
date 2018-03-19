@@ -1,9 +1,8 @@
-.back-body{
+.back-body {
     background: linear-gradient(to bottom, #e7eff6 0%, #adcbe3 100%);
-    height: 100vh;
+    min-height: 100vh;
     font-family: "Cabin Sketch";
 }
-
 
 .display-image {
     position: relative;
@@ -13,33 +12,70 @@
     border-radius: 50%;
     margin: auto;
 }
+
 .display-image img {
     position: absolute;
     left: 50%;
     top: 50%;
     height: 100%;
     width: auto;
-    -webkit-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-}
-
-.ban{
-    position: absolute;
-    background-color: rgba(176, 204, 227, 0.5);
-    user-select: none;
-    pointer-events: none;
-    padding: 50px;
-
-    /*not yet responsive*/
-    top: 40%;
-    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+.ban {
+    /*position: absolute;*/
+    /*background-color: rgba(176, 204, 227, 0.5);*/
+    /*user-select: none;*/
+    /*pointer-events: none;*/
+    /*padding: 50px;*/
+
+    /*!*not yet responsive*!*/
+    /*top: 40%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
 }
 
-.ban>p{
-    margin:0;
+.temp-particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.temp-ban {
+    position: relative;
+    z-index: 9999;
+    align-items: center;
+}
+
+.ban > p {
+    margin: 0;
+}
+
+.icons {
+    font-size: 30px;
+    margin: 5px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.icons:hover {
+    font-size: 40px;
+    transform: rotate(45deg);
+}
+
+.icons-linkedin {
+    color: #12c3e2;
 }
 
 

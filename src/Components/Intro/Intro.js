@@ -13,56 +13,51 @@ import Particles from 'react-particles-js';
 const intro = () => {
     return (
 
-        <div className = "back-body">
+        <div className="back-body">
 
-            <div className="ban">
-                <h1>Hello World!</h1>
-                <p>My name is </p>
-                <h2>Prayatna Bhattarai</h2>
-                <p>and I'm aspiring to become a full stack developer.</p>
-                <FontAwesomeIcon icon={linkedIn} />
-                <FontAwesomeIcon icon={github} />
-                <FontAwesomeIcon icon ={insta}/>
-                <FontAwesomeIcon icon ={downloadCv}/>
-
-
-
-            </div>
             <Particles
+                // style={{
+                //     position: 'absolute',
+                //     top: 0,
+                //     left: 0,
+                //     width: '100%',
+                //     height: '100%',
+                // }}
 
+                className="temp-particle"
                 params={{
                     particles: {
                         number: {
                             value: 100,
-                            density:{
+                            density: {
                                 enable: false,
                                 value_area: 500
                             }
                         },
-                        color:{
+                        color: {
                             value: '#9999a9'
                         },
-                        shape:{
-                          type: "circle",
-                          polygon:{
-                              nb_sides: 6
-                          }
+                        shape: {
+                            type: "circle",
+                            polygon: {
+                                nb_sides: 6
+                            }
                         },
-                        size:{
+                        size: {
                             value: 3,
                             random: true,
-                            anim:{
+                            anim: {
                                 enable: false,
                                 speed: 40,
-                                size_min:0.1,
+                                size_min: 0.1,
                                 sync: false
                             }
                         },
                         line_linked: {
                             distance: 150,
-                            color:"#2C3943"
+                            color: "#2C3943"
                         },
-                        move:{
+                        move: {
                             enable: true,
                             speed: 1,
                             direction: "none",
@@ -70,9 +65,9 @@ const intro = () => {
                             straight: false,
                             out_mode: "bounce",
                             bounce: false,
-                            attract:{
+                            attract: {
                                 enable: false,
-                                rotateX:600,
+                                rotateX: 600,
                                 rotateY: 1200
                             }
                         }
@@ -96,7 +91,42 @@ const intro = () => {
 
                 }}
             />
+            <div className="temp-ban">
+                <h1>Hello World!</h1>
+                <p>My name is </p>
+                <h2>Prayatna Bhattarai</h2>
+                <p>and I'm aspiring to become a full stack developer.</p>
+                <span>
 
+                    <FontAwesomeIcon icon={linkedIn} className="icons icons-linkedin"/>
+
+                </span>
+
+                <a href="https://www.github.com/prayatna">
+
+                    <FontAwesomeIcon icon={github}/>
+
+                </a>
+
+                <a href="https://www.linkedin.com/in/prayatnabhattarai">
+
+                    <FontAwesomeIcon icon={linkedIn} className="icons icons-linkedin"/>
+
+                </a>
+
+                <a href="https://www.instagram.com/prayatna">
+
+                    <FontAwesomeIcon icon={insta}/>
+
+                </a>
+                <a href="https://www.linkedin.com/in/prayatnabhattarai">
+
+                    <FontAwesomeIcon icon={downloadCv}/>
+
+                </a>
+
+
+            </div>
 
         </div>
 
