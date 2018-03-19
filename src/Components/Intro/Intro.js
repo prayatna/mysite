@@ -10,8 +10,10 @@ const intro = () => {
         <div className = "back-body">
 
             <div className="ban">
+                <h1>Hello World!</h1>
+                <p>My name is </p>
                 <h2>Prayatna Bhattarai</h2>
-                <p>...aspiring to become a full stack developer</p>
+                <p>and I'm aspiring to become a full stack developer.</p>
             </div>
             <Particles
 
@@ -80,41 +82,7 @@ const intro = () => {
                     retina_detected: true
 
                 }}
-
             />
-
-
-
-
-            {/*<Parallax*/}
-            {/*offsetYMax={20}*/}
-            {/*offsetYMin={-20}*/}
-            {/*slowerScrollRate*/}
-            {/*className="back-body">*/}
-            {/*<Col style={{paddingTop: "20px", paddingBottom: "20px"}}>*/}
-
-            {/*<div>*/}
-            {/*<h1>Hello World!</h1>*/}
-            {/*</div>*/}
-
-            {/*</Col>*/}
-
-            {/*<Parallax*/}
-            {/*offsetYMax={0}*/}
-            {/*offsetYMin={-20}*/}
-            {/*slowerScrollRate*/}
-            {/*>*/}
-            {/*<Col md={{size:6, offset: 3}}  className="ban">*/}
-            {/*<h5>*/}
-            {/*I'm Prayatna Bhattarai currently exploring the world of*/}
-            {/*ReactJS. If you like to know more about me feel free*/}
-            {/*to visit my social sites. And please do check out my projects*/}
-            {/*below which I developed during my uni days.*/}
-            {/*</h5>*/}
-            {/*</Col>*/}
-            {/*</Parallax>*/}
-
-            {/*</Parallax>*/}
 
 
         </div>
