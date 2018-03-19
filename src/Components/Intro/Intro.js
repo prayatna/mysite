@@ -2,6 +2,12 @@ import React from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import './Intro.css';
 import {Col} from 'reactstrap';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import linkedIn from '@fortawesome/fontawesome-free-brands/faLinkedin';
+import github from '@fortawesome/fontawesome-free-brands/faGithubAlt';
+import insta from '@fortawesome/fontawesome-free-brands/faInstagram';
+import downloadCv from '@fortawesome/fontawesome-free-solid/faFileAlt';
+
 import Particles from 'react-particles-js';
 
 const intro = () => {
@@ -14,6 +20,13 @@ const intro = () => {
                 <p>My name is </p>
                 <h2>Prayatna Bhattarai</h2>
                 <p>and I'm aspiring to become a full stack developer.</p>
+                <FontAwesomeIcon icon={linkedIn} />
+                <FontAwesomeIcon icon={github} />
+                <FontAwesomeIcon icon ={insta}/>
+                <FontAwesomeIcon icon ={downloadCv}/>
+
+
+
             </div>
             <Particles
 
