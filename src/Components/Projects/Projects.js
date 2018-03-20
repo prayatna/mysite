@@ -15,7 +15,7 @@ const projects = () => {
             >
                 <div>Hoola
                     <Col md={6}>
-                        <Parallax offsetXMax={-120}
+                        <Parallax offsetXMax={-50}
                                   offsetXMin={50}
                                   slowerScrollRate>
                             <Card>

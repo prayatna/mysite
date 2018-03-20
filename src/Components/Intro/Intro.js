@@ -1,14 +1,7 @@
 import React from 'react';
-import {Parallax} from 'react-scroll-parallax';
 import './Intro.css';
-import {Col} from 'reactstrap';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import linkedIn from '@fortawesome/fontawesome-free-brands/faLinkedin';
-import github from '@fortawesome/fontawesome-free-brands/faGithubAlt';
-import insta from '@fortawesome/fontawesome-free-brands/faInstagram';
-import downloadCv from '@fortawesome/fontawesome-free-solid/faFileAlt';
-
 import Particles from 'react-particles-js';
+import Banner from './Banner';
 
 const intro = () => {
     return (
@@ -16,22 +9,14 @@ const intro = () => {
         <div className="back-body">
 
             <Particles
-                // style={{
-                //     position: 'absolute',
-                //     top: 0,
-                //     left: 0,
-                //     width: '100%',
-                //     height: '100%',
-                // }}
-
-                className="temp-particle"
+                className="background-particle"
                 params={{
                     particles: {
                         number: {
-                            value: 100,
+                            value: 20,
                             density: {
-                                enable: false,
-                                value_area: 500
+                                enable: true,
+                                value_area: 900
                             }
                         },
                         color: {
@@ -91,42 +76,8 @@ const intro = () => {
 
                 }}
             />
-            <div className="temp-ban">
-                <h1>Hello World!</h1>
-                <p>My name is </p>
-                <h2>Prayatna Bhattarai</h2>
-                <p>and I'm aspiring to become a full stack developer.</p>
-                <span>
 
-                    <FontAwesomeIcon icon={linkedIn} className="icons icons-linkedin"/>
-
-                </span>
-
-                <a href="https://www.github.com/prayatna">
-
-                    <FontAwesomeIcon icon={github}/>
-
-                </a>
-
-                <a href="https://www.linkedin.com/in/prayatnabhattarai">
-
-                    <FontAwesomeIcon icon={linkedIn} className="icons icons-linkedin"/>
-
-                </a>
-
-                <a href="https://www.instagram.com/prayatna">
-
-                    <FontAwesomeIcon icon={insta}/>
-
-                </a>
-                <a href="https://www.linkedin.com/in/prayatnabhattarai">
-
-                    <FontAwesomeIcon icon={downloadCv}/>
-
-                </a>
-
-
-            </div>
+            <Banner/>
 
         </div>
 
