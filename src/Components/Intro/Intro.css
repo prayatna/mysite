@@ -24,38 +24,46 @@
     transform: translate(-50%, -50%);
 }
 
+/*.ban {*/
+    /*!*position: absolute;*!*/
+    /*!*background-color: rgba(176, 204, 227, 0.5);*!*/
+    /*!*user-select: none;*!*/
+    /*!*pointer-events: none;*!*/
+    /*!*padding: 50px;*!*/
+
+    /*!*!*not yet responsive*!*!*/
+    /*!*top: 40%;*!*/
+    /*!*left: 50%;*!*/
+    /*!*transform: translate(-50%, -50%);*!*/
+
+    /*min-height: 100vh;*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+
+/*}*/
+
+.background-particle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
 .ban {
-    /*position: absolute;*/
-    /*background-color: rgba(176, 204, 227, 0.5);*/
-    /*user-select: none;*/
-    /*pointer-events: none;*/
-    /*padding: 50px;*/
-
-    /*!*not yet responsive*!*/
-    /*top: 40%;*/
-    /*left: 50%;*/
-    /*transform: translate(-50%, -50%);*/
-
     min-height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
 }
 
-.temp-particle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.temp-ban {
-    position: relative;
-    z-index: 9999;
-    align-items: center;
+.ban a{
+    position:relative;
+    z-index:9999;
+    color:#fff;
+    font-size:32px;
 }
 
 .ban > p {
@@ -67,12 +75,11 @@
     padding:10px;
     margin: 5px;
     -webkit-transition: all 0.8s;
-    transition: all 0.8s;
+    transition: all 0.2s;
     color: #222222;
 }
 
 .icons:hover {
-    font-size: 70px;
     transform: rotate(45deg);
 }
 

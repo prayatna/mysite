@@ -24,7 +24,7 @@ const intro = () => {
                 //     height: '100%',
                 // }}
 
-                className="temp-particle"
+                className="background-particle"
                 params={{
                     particles: {
                         number: {
@@ -91,34 +91,27 @@ const intro = () => {
 
                 }}
             />
-            <div className="temp-ban">
+            <div className="ban">
                 <h1>Hello World!</h1>
                 <p>My name is </p>
                 <h2>Prayatna Bhattarai</h2>
                 <p>and I'm aspiring to become a full stack developer.</p>
+
                 <div>
-
-                    <a href="https://www.github.com/prayatna">
-
+                    <a href="https://www.github.com/prayatna" target="_blank">
                         <FontAwesomeIcon icon={github} className="icons icons-github"/>
-
                     </a>
 
-                    <a href="https://www.linkedin.com/in/prayatnabhattarai">
-
+                    <a href="https://www.linkedin.com/in/prayatnabhattarai" target="_blank">
                         <FontAwesomeIcon icon={linkedIn} className="icons icons-linkedin"/>
-
                     </a>
 
-                    <a href="https://www.instagram.com/prayatna">
-
+                    <a href="https://www.instagram.com/prayatna" target="_blank">
                         <FontAwesomeIcon icon={insta} className="icons icons-instagram"/>
-
                     </a>
-                    <a href="https://www.linkedin.com/in/prayatnabhattarai">
 
+                    <a href="https://www.linkedin.com/in/prayatnabhattarai" target="_blank">
                         <FontAwesomeIcon icon={downloadCv} className="icons icons-cv"/>
-
                     </a>
                 </div>
 
