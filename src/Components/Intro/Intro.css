@@ -24,26 +24,6 @@
     transform: translate(-50%, -50%);
 }
 
-/*.ban {*/
-/*!*position: absolute;*!*/
-/*!*background-color: rgba(176, 204, 227, 0.5);*!*/
-/*!*user-select: none;*!*/
-/*!*pointer-events: none;*!*/
-/*!*padding: 50px;*!*/
-
-/*!*!*not yet responsive*!*!*/
-/*!*top: 40%;*!*/
-/*!*left: 50%;*!*/
-/*!*transform: translate(-50%, -50%);*!*/
-
-/*min-height: 100vh;*/
-/*display: flex;*/
-/*justify-content: center;*/
-/*flex-direction: column;*/
-/*align-items: center;*/
-
-/*}*/
-
 .background-particle {
     position: absolute;
     width: 100%;
