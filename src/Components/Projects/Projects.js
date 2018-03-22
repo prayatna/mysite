@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardHeader, CardTitle, CardText, CardBody, CardFooter, Button, Col} from 'reactstrap';
+import {Card, CardTitle, CardText, CardBody, CardFooter, Button, Col} from 'reactstrap';
 import {Parallax} from 'react-scroll-parallax';
 import './Projects.css'
 
@@ -8,22 +8,22 @@ const projects = () => {
     return (
         <div>
             <Parallax
-                offsetYMax={50}
-                offsetYMin={-50}
+                offsetYMax={20}
+                offsetYMin={-20}
                 slowerScrollRate
                 className="body-color"
             >
-                <div>Hoola
-                    <Col md={6}>
-                        <Parallax offsetXMax={-50}
-                                  offsetXMin={50}
+                <div>
+                    <Col md={12}>
+                        hoOLA
+                        <Parallax offsetYMax={-20}
+                                  offsetYMin={20}
                                   slowerScrollRate>
                             <Card>
                                 <CardBody>
-                                    <CardTitle>Special Title Treatment</CardTitle>
-                                    <CardText>With supporting text below as a natural lead-in to additional
-                                        content.</CardText>
-                                    <Button>Go somewhere</Button>
+                                    <CardTitle>Projects</CardTitle>
+                                    <CardText>List of projects will go here
+                                        </CardText>
                                 </CardBody>
                                 <CardFooter className="text-muted">Footer</CardFooter>
                             </Card>
