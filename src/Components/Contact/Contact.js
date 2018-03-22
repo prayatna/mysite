@@ -2,7 +2,7 @@ import React from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import './Contact.css';
 import dp from '../../assets/img/dp.jpg';
-import {Row, Col, Card, CardHeader, CardBody, CardTitle, Button, CardFooter, CardText} from 'reactstrap';
+import { Col, Card, CardHeader, CardBody, Button, Form, FormGroup, Label, Input} from 'reactstrap';
 
 
 const contact = () =>{
@@ -14,26 +14,42 @@ const contact = () =>{
                 offsetYMin={-50}
                 slowerScrollRate
             >
-
-                <div className="display-image">
+                <div className="display-image" >
                     <img src={dp} alt="dp"/>
                 </div>
 
-                <Row>
-                    <Col md={12}>
-                        This is my website.
 
+                    <Col md={{size:8, offset:2}} style={{paddingTop: "20px"}}>
                         <Card>
-                            <CardHeader tag="h3">Featured</CardHeader>
+                            <CardHeader tag="h3">Get in touch!</CardHeader>
                             <CardBody>
-                                <CardTitle>Special Title Treatment</CardTitle>
-                                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                                <Button>Go somewhere</Button>
+                                <Form>
+                                    <FormGroup row>
+                                        <Label for="name" sm={2}>Name:</Label>
+                                        <Col sm={10}>
+                                            <Input type="name" name="name" id="exampleEmail" placeholder="Your awesome name" />
+                                        </Col>
+                                    </FormGroup>
+                                    <FormGroup row>
+                                        <Label for="exampleEmail" sm={2}>Email:</Label>
+                                        <Col sm={10}>
+                                            <Input type="email" name="email" id="exampleEmail" placeholder="Email" />
+                                        </Col>
+                                    </FormGroup>
+                                    <FormGroup row>
+                                        <Label for="exampleText" sm={2}>Message:</Label>
+                                        <Col sm={10}>
+                                            <Input type="textarea" name="text" id="exampleText" />
+                                        </Col>
+                                    </FormGroup>
+
+                                    <Button>Send</Button>
+                                </Form>
+
                             </CardBody>
-                            <CardFooter className="text-muted">Footer</CardFooter>
                         </Card>
                     </Col>
-                </Row>
+
             </Parallax>
         </div>
     );

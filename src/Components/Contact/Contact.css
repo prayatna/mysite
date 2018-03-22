@@ -1,5 +1,7 @@
 .body-col{
     background: linear-gradient(#4b86b4 0%, #222222);
+    font-family: "Cabin Sketch";
+    min-height: 100vh;
 }
 
 .display-image {
