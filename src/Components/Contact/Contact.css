@@ -1,3 +1,25 @@
 .body-col{
     background: linear-gradient(#4b86b4 0%, #222222);
+    font-family: "Cabin Sketch";
+    min-height: 100vh;
+}
+
+.display-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.display-image img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
