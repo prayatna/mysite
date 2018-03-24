@@ -1,9 +1,11 @@
 import React from 'react';
 import {Card, CardTitle, CardText, CardBody, CardFooter, Button, Col, Row} from 'reactstrap';
 import {Parallax} from 'react-scroll-parallax';
-import './Projects.css'
+import './Projects.css';
+import Project from './Project';
 
 const projects = () => {
+//TODO: create a single project component
 
     return (
         <div>
@@ -14,7 +16,6 @@ const projects = () => {
                 className="body-color"
             >
                 <div>
-
                             hoOLA
                             <Parallax offsetYMax={-20}
                                       offsetYMin={20}
@@ -25,9 +26,10 @@ const projects = () => {
                                     <CardBody>
                                         <CardTitle>Projects</CardTitle>
                                         <CardText>List of projects will go here
+
                                         </CardText>
                                     </CardBody>
-                                    <CardFooter className="text-muted">Footer</CardFooter>
+                                    <CardFooter className="text-muted"> <Project/> </CardFooter>
                                 </Card>
 
                                 </Col>
@@ -74,10 +76,6 @@ const projects = () => {
                 </div>
             </Parallax>
 
-            <Parallax>
-
-                something here
-            </Parallax>
         </div>
     );
 
