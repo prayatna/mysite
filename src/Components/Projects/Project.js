@@ -20,7 +20,7 @@ class Project extends Component {
     render() {
         return (
             <div>
-                <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}Read more</Button>
+                <Button color="primary" onClick={this.toggle}>{this.props.buttonLabel}Read more</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} size="lg">
                     <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
                     <ModalBody>

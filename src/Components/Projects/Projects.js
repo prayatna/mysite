@@ -3,9 +3,11 @@ import {Card, CardTitle, CardText, CardBody, CardFooter, Button, Col, Row} from 
 import {Parallax} from 'react-scroll-parallax';
 import './Projects.css';
 import Project from './Project';
+import ProjectsDetail from '../../Containers/ProjectsDetail';
 
 const projects = () => {
 //TODO: create a single project component
+
 
     return (
         <div>
@@ -21,55 +23,24 @@ const projects = () => {
                                       offsetYMin={20}
                                       slowerScrollRate>
                                 <Row  style={{paddingBottom:"20px"}}>
-                                <Col md={{size:4, offset:2}}>
-                                <Card>
-                                    <CardBody>
-                                        <CardTitle>Projects</CardTitle>
-                                        <CardText>List of projects will go here
 
-                                        </CardText>
-                                    </CardBody>
-                                    <CardFooter className="text-muted"> <Project/> </CardFooter>
-                                </Card>
-
-                                </Col>
-
-                                <Col md={4}>
-                                    <Card>
-                                        <CardBody>
-                                            <CardTitle>Projects</CardTitle>
-                                            <CardText>List of projects will go here
-                                            </CardText>
-                                        </CardBody>
-                                        <CardFooter className="text-muted">Footer</CardFooter>
-                                    </Card>
-                                </Col>
-                                </Row>
-
-                                <Row>
-                                    <Col md={{size:4, offset:2}}>
+                                    {ProjectsDetail.projects.map(project=>(
+                                        <Col md={{size:6}} style={{padding:"20px"}}>
                                         <Card>
                                             <CardBody>
-                                                <CardTitle>Projects</CardTitle>
-                                                <CardText>List of projects will go here
+                                                <CardTitle>{project.title}</CardTitle>
+                                                <CardText>{project.description}
+
                                                 </CardText>
                                             </CardBody>
-                                            <CardFooter className="text-muted">Footer</CardFooter>
+                                            <CardFooter className="text-muted"> <Project/> </CardFooter>
                                         </Card>
+                                        </Col>
+                                    ))}
 
-                                    </Col>
-
-                                    <Col md={4}>
-                                        <Card>
-                                            <CardBody>
-                                                <CardTitle>Projects</CardTitle>
-                                                <CardText>List of projects will go here
-                                                </CardText>
-                                            </CardBody>
-                                            <CardFooter className="text-muted">Footer</CardFooter>
-                                        </Card>
-                                    </Col>
                                 </Row>
+
+
                             </Parallax>
 
 
