@@ -28,7 +28,7 @@ const banner =()=>{
                         <FontAwesomeIcon icon={insta} className="icons icons-instagram"/>
                     </a>
 
-                    <a href="https://www.linkedin.com/in/prayatnabhattarai" rel="noopener noreferrer" target="_blank">
+                    <a href="https://standardresume.co/prayatna" rel="noopener noreferrer" target="_blank">
                         <FontAwesomeIcon icon={downloadCv} className="icons icons-cv"/>
                     </a>
                 </div>
