@@ -13,21 +13,21 @@ class Projects extends Component {
             <div>
                 <Parallax
                     offsetYMax={20}
-                    offsetYMin={-20}
+                    offsetYMin={0}
                     slowerScrollRate
                     className="body-color"
                 >
                     <div>
                         hoOLA
-                        <Parallax offsetYMax={-20}
-                                  offsetYMin={20}
+                        <Parallax offsetYMax={20}
+                                  offsetYMin={0}
                                   slowerScrollRate>
-                            <Row className="row-margin">
+                            <Row>
                                 {ProjectsDetail.projects.map(project => (
 
 
                                     <Col key={project.id}
-                                         md={{size: 4, offset:project.offsetVal }}
+                                         md={{size: 4, offset: project.offsetVal }}
                                          style={{padding: "20px"}}>
                                         <Card>
                                             <CardBody>
@@ -36,7 +36,9 @@ class Projects extends Component {
                                                     {project.description}
                                                 </CardText>
                                             </CardBody>
-                                            <CardFooter className="text-muted"> <Project/> </CardFooter>
+                                            <CardFooter className="text-muted">
+                                                <Project projectDetail ={project}/>
+                                            </CardFooter>
                                         </Card>
                                     </Col>
 
