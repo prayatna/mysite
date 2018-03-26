@@ -2,3 +2,19 @@
     background:linear-gradient(#adcbe3 0%,#4b86b4 100%);
     height: 100vh;
 }
+
+@media(min-width:768px){
+    .row-margin{
+        margin:0 200px 0 200px;
+    }
+}
+@media(min-width:992px){
+    .row-margin{
+        margin:0 200px 0 200px;
+    }
+}
+@media(min-width:1200px){
+    .row-margin{
+        margin:0 200px 0 200px;
+    }
+}
