@@ -25,6 +25,7 @@ class Project extends Component {
                     <ModalHeader toggle={this.toggle}>{this.props.projectDetail.title}</ModalHeader>
                     <ModalBody>
                         {this.props.projectDetail.more_info}
+                        <img className="img-thumbnail" src ={this.props.projectDetail.screenshots}/>
                     </ModalBody>
                     <ModalFooter>
                         <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}

@@ -25,7 +25,6 @@ class Projects extends Component {
                             <Row>
                                 {ProjectsDetail.projects.map(project => (
 
-
                                     <Col key={project.id}
                                          md={{size: 4, offset: project.offsetVal }}
                                          style={{padding: "20px"}}>
