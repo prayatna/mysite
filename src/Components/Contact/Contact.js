@@ -19,6 +19,11 @@ class Contact extends Component{
         })
     };
 
+    handleSubmit = (e) =>{
+        e.preventDefault();
+        const {name,email,message} =this.state;
+
+    }
 
     render(){
         return(
@@ -39,23 +44,23 @@ class Contact extends Component{
                         <Card>
                             <CardHeader tag="h3">Get in touch!</CardHeader>
                             <CardBody>
-                                <Form>
+                                <Form onSubmit ={this.handleSubmit}>
                                     <FormGroup row>
                                         <Label for="name" sm={2}>Name:</Label>
                                         <Col sm={10}>
-                                            <Input type="name" name="name" id="exampleEmail" placeholder="Your awesome name"  onChange ={this.handleChange}/>
+                                            <Input type="name" name="name"  placeholder="Your awesome name"  onChange ={this.handleChange}/>
                                         </Col>
                                     </FormGroup>
                                     <FormGroup row>
                                         <Label for="exampleEmail" sm={2}>Email:</Label>
                                         <Col sm={10}>
-                                            <Input type="email" name="email" id="exampleEmail" placeholder="Email" onChange ={this.handleChange} />
+                                            <Input type="email" name="email"  placeholder="Email" onChange ={this.handleChange} />
                                         </Col>
                                     </FormGroup>
                                     <FormGroup row>
                                         <Label for="exampleText" sm={2}>Message:</Label>
                                         <Col sm={10}>
-                                            <Input type="textarea" name="text" id="exampleText" onChange ={this.handleChange} />
+                                            <Input type="textarea" name="message"  onChange ={this.handleChange} />
                                         </Col>
                                     </FormGroup>
 
