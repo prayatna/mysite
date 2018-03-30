@@ -1,22 +1,24 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import './Contact.css';
 import dp from '../../assets/img/dp.jpg';
 import { Col, Card, CardHeader, CardBody, Button, Form, FormGroup, Label, Input} from 'reactstrap';
 
 
-const contact = () =>{
-    return(
-        <div>
-            <Parallax
-                className="body-col"
-                offsetYMax={50}
-                offsetYMin={-50}
-                slowerScrollRate
-            >
-                <div className="display-image" >
-                    <img src={dp} alt="dp"/>
-                </div>
+class Contact extends Component{
+    render(){
+        return(
+
+            <div>
+                <Parallax
+                    className="body-col"
+                    offsetYMax={50}
+                    offsetYMin={-50}
+                    slowerScrollRate
+                >
+                    <div className="display-image" >
+                        <img src={dp} alt="dp"/>
+                    </div>
 
 
                     <Col md={{size:8, offset:2}} style={{paddingTop: "20px"}}>
@@ -50,9 +52,11 @@ const contact = () =>{
                         </Card>
                     </Col>
 
-            </Parallax>
-        </div>
-    );
+                </Parallax>
+            </div>
+
+        );
+    }
 }
 
-export default contact;
+export default Contact;
