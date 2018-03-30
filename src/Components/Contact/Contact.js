@@ -6,6 +6,20 @@ import { Col, Card, CardHeader, CardBody, Button, Form, FormGroup, Label, Input}
 
 
 class Contact extends Component{
+
+    state ={
+        name:'',
+        email:'',
+        message:''
+    };
+
+    handleChange = (e) =>{
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    };
+
+
     render(){
         return(
 
@@ -29,19 +43,19 @@ class Contact extends Component{
                                     <FormGroup row>
                                         <Label for="name" sm={2}>Name:</Label>
                                         <Col sm={10}>
-                                            <Input type="name" name="name" id="exampleEmail" placeholder="Your awesome name" />
+                                            <Input type="name" name="name" id="exampleEmail" placeholder="Your awesome name"  onChange ={this.handleChange}/>
                                         </Col>
                                     </FormGroup>
                                     <FormGroup row>
                                         <Label for="exampleEmail" sm={2}>Email:</Label>
                                         <Col sm={10}>
-                                            <Input type="email" name="email" id="exampleEmail" placeholder="Email" />
+                                            <Input type="email" name="email" id="exampleEmail" placeholder="Email" onChange ={this.handleChange} />
                                         </Col>
                                     </FormGroup>
                                     <FormGroup row>
                                         <Label for="exampleText" sm={2}>Message:</Label>
                                         <Col sm={10}>
-                                            <Input type="textarea" name="text" id="exampleText" />
+                                            <Input type="textarea" name="text" id="exampleText" onChange ={this.handleChange} />
                                         </Col>
                                     </FormGroup>
 
