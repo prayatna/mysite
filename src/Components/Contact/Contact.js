@@ -3,6 +3,7 @@ import {Parallax} from 'react-scroll-parallax';
 import './Contact.css';
 import dp from '../../assets/img/dp.jpg';
 import { Col, Card, CardHeader, CardBody, Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import axios from 'axios';
 
 
 class Contact extends Component{
@@ -19,9 +20,22 @@ class Contact extends Component{
         })
     };
 
-    handleSubmit = (e) =>{
+    async handleSubmit(e){
         e.preventDefault();
         const {name,email,message} =this.state;
+        const form = await axios.post('https://mysite-back.herokuapp.com/api/email',{
+            name,
+            email,
+            message
+        }).then(function(response){
+            console.log(response);
+            return response
+        });
+
+        //TODO: handle more appropriately
+        if(form.data.success = 'true'){
+            alert('email sent');
+        }
 
     }
 
@@ -44,7 +58,7 @@ class Contact extends Component{
                         <Card>
                             <CardHeader tag="h3">Get in touch!</CardHeader>
                             <CardBody>
-                                <Form onSubmit ={this.handleSubmit}>
+                                <Form onSubmit ={this.handleSubmit.bind(this)}>
                                     <FormGroup row>
                                         <Label for="name" sm={2}>Name:</Label>
                                         <Col sm={10}>
