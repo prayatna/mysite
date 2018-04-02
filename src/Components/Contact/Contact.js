@@ -2,17 +2,22 @@ import React, {Component} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import './Contact.css';
 import dp from '../../assets/img/dp.jpg';
-import { Col, Card, CardHeader, CardBody, Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import { Col, Card, CardHeader, CardBody, Button, Form, FormGroup, Label, Input, Alert} from 'reactstrap';
 import axios from 'axios';
+import Success from './Success';
 
 
 class Contact extends Component{
 
     state ={
-        name:'',
-        email:'',
-        message:''
+        emailData:{
+            name:'',
+            email:'',
+            message:''
+        },
+        alert: false
     };
+
 
     handleChange = (e) =>{
         this.setState({
@@ -34,14 +39,16 @@ class Contact extends Component{
 
         //TODO: handle more appropriately
         if(form.data.success = 'true'){
-            alert('email sent');
+            this.setState({
+                ...this.emailData,
+                alert:true
+            })
         }
 
     }
 
     render(){
         return(
-
             <div>
                 <Parallax
                     className="body-col"
@@ -49,6 +56,8 @@ class Contact extends Component{
                     offsetYMin={-50}
                     slowerScrollRate
                 >
+                    {console.log(this.state.alert,"outsite successc ompnent")}
+                    <Success alert = {this.state.alert}/>
                     <div className="display-image" >
                         <img src={dp} alt="dp"/>
                     </div>
