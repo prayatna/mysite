@@ -5,6 +5,7 @@ import dp from '../../assets/img/dp.jpg';
 import { Col, Card, CardHeader, CardBody, Button, Form, FormGroup, Label, Input, Alert} from 'reactstrap';
 import axios from 'axios';
 import Success from './Success';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 
 class Contact extends Component{
@@ -47,6 +48,12 @@ class Contact extends Component{
 
     }
 
+    onChange(response) {
+        this.setState({
+            'g-recaptcha-response': response
+        });
+    }
+
     render(){
         return(
             <div>
@@ -86,6 +93,10 @@ class Contact extends Component{
                                             <Input type="textarea" name="message"  onChange ={this.handleChange} />
                                         </Col>
                                     </FormGroup>
+                                    <ReCAPTCHA
+                                        ref="recaptcha"
+                                        sitekey="6LfaAewSAAAAAL80hyGww4IMma_PVKfRIXhrbJT-"
+                                        onChange={this.onChange.bind(this)}/>
 
                                     <Button>Send</Button>
                                 </Form>
