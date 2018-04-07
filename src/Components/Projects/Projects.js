@@ -41,12 +41,10 @@ class Projects extends Component {
                                         </Card>
                                     </Col>
 
+
                                 ))}
-
                             </Row>
-
                         </Parallax>
-
 
                     </div>
                 </Parallax>
