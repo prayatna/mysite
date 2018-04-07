@@ -12,6 +12,6 @@ WebFont.load({
     }
 });
 
-ReactDOM.render(
-        <ParallaxProvider><App /> </ParallaxProvider>
-    , document.getElementById('root'));
+ReactDOM.render(<ParallaxProvider>
+        <App />
+    </ParallaxProvider>, document.getElementById('root'));
