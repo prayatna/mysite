@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Parallax} from 'react-scroll-parallax';
 import './Contact.css';
 import dp from '../../assets/img/dp.jpg';
 import { Col, Card, CardHeader, CardBody, Button, Form, FormGroup, Label, Input, Alert} from 'reactstrap';
@@ -50,12 +49,6 @@ class Contact extends Component{
     render(){
         return(
             <div>
-                <Parallax
-                    className="body-col"
-                    offsetYMax={50}
-                    offsetYMin={-50}
-                    slowerScrollRate
-                >
                     {console.log(this.state.alert,"outsite successc ompnent")}
                     <Success alert = {this.state.alert}/>
                     <div className="display-image" >
@@ -93,8 +86,6 @@ class Contact extends Component{
                             </CardBody>
                         </Card>
                     </Col>
-
-                </Parallax>
             </div>
 
         );

@@ -9,7 +9,7 @@ class App extends Component {
         return (
                 <div className="App">
                     <Intro/>
-                    {/*<Projects/>*/}
+                    <Projects/>
                     {/*<Contact/>*/}
                 </div>
         );

@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Card, CardTitle, CardText, CardBody, CardFooter, Button, Col, Row, Container} from 'reactstrap';
-import {Parallax} from 'react-scroll-parallax';
 import './Projects.css';
 import Project from './Project';
 import ProjectsDetail from '../../Containers/ProjectsDetail';
@@ -10,18 +9,10 @@ class Projects extends Component {
 // TODO: render offset programmatically
     render() {
         return (
-            <div>
-                <Parallax
-                    offsetYMax={20}
-                    offsetYMin={0}
-                    slowerScrollRate
-                    className="body-color"
-                >
+            <div className="body-color">
                     <div>
                         hoOLA
-                        <Parallax offsetYMax={20}
-                                  offsetYMin={0}
-                                  slowerScrollRate>
+
                             <Row>
                                 {ProjectsDetail.projects.map(project => (
 
@@ -44,10 +35,8 @@ class Projects extends Component {
 
                                 ))}
                             </Row>
-                        </Parallax>
 
                     </div>
-                </Parallax>
 
             </div>
         );

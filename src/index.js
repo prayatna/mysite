@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './Containers/App';
 import 'bootstrap/dist/css/bootstrap.css';
-import { ParallaxProvider } from 'react-scroll-parallax';
 import WebFont from 'webfontloader';
 
 WebFont.load({
@@ -12,6 +11,5 @@ WebFont.load({
     }
 });
 
-ReactDOM.render(<ParallaxProvider>
-        <App />
-    </ParallaxProvider>, document.getElementById('root'));
+ReactDOM.render(<App />,
+    document.getElementById('root'));
