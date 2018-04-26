@@ -12,10 +12,12 @@
     "bootstrap": "^4.0.0",
     "react": "^16.3.1",
     "react-dom": "^16.2.0",
+    "react-inview-monitor": "^2.2.0",
     "react-particles-js": "^2.1.1",
     "react-reveal": "^1.2.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
+    "react-vertical-timeline-component": "^2.0.6",
     "react-waypoint": "^8.0.1",
     "reactstrap": "^5.0.0-beta.2",
     "webfontloader": "^1.6.28"

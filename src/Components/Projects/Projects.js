@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {Card, CardTitle, CardText, CardBody, CardFooter, Button, Col, Row, Container} from 'reactstrap';
 import './Projects.css';
 import Project from './Project';
 import ProjectsDetail from '../../Containers/ProjectsDetail';
+import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 class Projects extends Component {
 
@@ -10,34 +11,23 @@ class Projects extends Component {
     render() {
         return (
             <div className="body-color">
-                    <div>
-                        hoOLA
-
-                            <Row>
-                                {ProjectsDetail.projects.map(project => (
-
-                                    <Col key={project.id}
-                                         md={{size: 4, offset: project.offsetVal }}
-                                         style={{padding: "20px"}}>
-                                        <Card>
-                                            <CardBody>
-                                                <CardTitle>{project.title}</CardTitle>
-                                                <CardText>
-                                                    {project.description}
-                                                </CardText>
-                                            </CardBody>
-                                            <CardFooter className="text-muted">
-                                                <Project projectDetail ={project}/>
-                                            </CardFooter>
-                                        </Card>
-                                    </Col>
-
-
-                                ))}
-                            </Row>
-
+                <div>
+                    Projects
+                        <VerticalTimeline>
+                            {ProjectsDetail.projects.map(project => (
+                                <VerticalTimelineElement
+                                    key={project.id}
+                                    iconStyle={{background: 'rgb(33, 150, 243)', color: '#fff'}}
+                                >
+                                    <h4 className="vertical-timeline-element-title">{project.title}</h4>
+                                    <p>
+                                        {project.description}
+                                    </p>
+                                    <div><Project projectDetail={project}/></div>
+                                </VerticalTimelineElement>
+                            ))}
+                        </VerticalTimeline>
                     </div>
-
             </div>
         );
     }
