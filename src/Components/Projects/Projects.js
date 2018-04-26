@@ -4,6 +4,8 @@ import Project from './Project';
 import ProjectsDetail from '../../Containers/ProjectsDetail';
 import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import IconBootstrap from 'react-devicon/bootstrap/plain'
+
 
 class Projects extends Component {
 
@@ -12,7 +14,7 @@ class Projects extends Component {
         return (
             <div className="body-color">
                 <div>
-                    Projects
+                    Projects <div><IconBootstrap width={100} height={100}/></div>
                         <VerticalTimeline>
                             {ProjectsDetail.projects.map(project => (
                                 <VerticalTimelineElement
