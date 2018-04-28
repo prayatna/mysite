@@ -13,7 +13,8 @@ class Projects extends Component {
         return (
             <div className="body-color">
                 <div>
-                    Projects
+                    <h3>Projects</h3>
+                    <p>some of the projects I worked on during my spare time, internship, and while at uni.</p>
                         <VerticalTimeline>
                             {ProjectsDetail.projects.map(project => (
                                 <VerticalTimelineElement
