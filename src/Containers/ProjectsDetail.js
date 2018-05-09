@@ -6,6 +6,10 @@ import nutri from '../assets/img/nutri.png';
 import moreapp from '../assets/img/moreapp.png';
 import morenutri from '../assets/img/morenutri.png';
 import nutrimain2 from '../assets/img/nutrimain2.png';
+import shoplist1 from '../assets/img/shoplist1.png';
+import shoplist2 from '../assets/img/shoplist2.png';
+
+
 
 
 
@@ -68,8 +72,8 @@ export default{
             description: "basic  Android app to add/remove shopping list item",
             more_info: "more explanation about the project",
             screenshots:[{
-                main: dashboard,
-                other_visuals: cbr
+                main: shoplist1,
+                other_visuals: shoplist2
             }],
             offsetVal: 2
 

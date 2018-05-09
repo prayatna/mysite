@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter,Col} from 'reactstrap';
+import {Button, Modal, ModalHeader, ModalBody, ModalFooter, Col} from 'reactstrap';
 
 class Project extends Component {
     constructor(props) {
@@ -18,6 +18,21 @@ class Project extends Component {
     }
 
     render() {
+        let main2 = '';
+        let otherVisuals = '';
+        let otherVisuals2 = '';
+        if (this.props.projectDetail.screenshots[0]["main2"]) {
+            main2 = <img className="img-thumbnail" src={this.props.projectDetail.screenshots[0]["main2"]}/>
+        }
+        if(this.props.projectDetail.screenshots[0]["other_visuals2"]){
+            otherVisuals2 =<img className="img-thumbnail" src={this.props.projectDetail.screenshots[0]["other_visuals2"]}/>
+        }
+
+        if(this.props.projectDetail.screenshots[0]["other_visuals"]){
+            otherVisuals =<img className="img-thumbnail" src={this.props.projectDetail.screenshots[0]["other_visuals"]}/>
+
+        }
+
         return (
             <div>
                 <Button color="primary" onClick={this.toggle}>{this.props.buttonLabel}Read more</Button>
@@ -27,13 +42,11 @@ class Project extends Component {
                         {this.props.projectDetail.more_info}
                         <br/>
                         <Col md="12">
-                            <img className="img-thumbnail" src ={this.props.projectDetail.screenshots[0]["main"]}/>
-                            <img className="img-thumbnail" src={this.props.projectDetail.screenshots[0]["main2"]}/>
+                            <img className="img-thumbnail" src={this.props.projectDetail.screenshots[0]["main"]}/>
+                            {main2}
                         </Col>
-
-                        <img className="img-thumbnail" src ={this.props.projectDetail.screenshots[0]["other_visuals2"]}/>
-                        <img className="img-thumbnail" src ={this.props.projectDetail.screenshots[0]["other_visuals"]}/>
-
+                        {otherVisuals2}
+                        {otherVisuals}
 
                     </ModalBody>
                     <ModalFooter>
