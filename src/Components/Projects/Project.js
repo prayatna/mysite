@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter,Col} from 'reactstrap';
 
 class Project extends Component {
     constructor(props) {
@@ -26,7 +26,11 @@ class Project extends Component {
                     <ModalBody>
                         {this.props.projectDetail.more_info}
                         <br/>
-                        <img className="img-thumbnail" src ={this.props.projectDetail.screenshots[0]["main"]}/>
+                        <Col md="12">
+                            <img className="img-thumbnail" src ={this.props.projectDetail.screenshots[0]["main"]}/>
+                            <img className="img-thumbnail" src={this.props.projectDetail.screenshots[0]["main2"]}/>
+                        </Col>
+
                         <img className="img-thumbnail" src ={this.props.projectDetail.screenshots[0]["other_visuals2"]}/>
                         <img className="img-thumbnail" src ={this.props.projectDetail.screenshots[0]["other_visuals"]}/>
 
