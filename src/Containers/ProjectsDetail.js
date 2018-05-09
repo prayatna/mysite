@@ -3,6 +3,9 @@ import dashboard from '../assets/img/dash-weather.png';
 import cbr from '../assets/img/cbr.png';
 import fileportalDash from '../assets/img/fileportalDash.png';
 import nutri from '../assets/img/nutri.png';
+import moreapp from '../assets/img/moreapp.png';
+import morenutri from '../assets/img/morenutri.png';
+
 
 
 
@@ -49,7 +52,8 @@ export default{
             "nutritional value that particular food item contains. Finally, the result will be displayed as nutritional facts of the food item.",
             screenshots:[{
                 main: nutri,
-                other_visuals: cbr
+                other_visuals: moreapp,
+                other_visuals2:morenutri
             }],
             offsetVal: 0
 

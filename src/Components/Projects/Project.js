@@ -25,12 +25,16 @@ class Project extends Component {
                     <ModalHeader toggle={this.toggle}>{this.props.projectDetail.title}</ModalHeader>
                     <ModalBody>
                         {this.props.projectDetail.more_info}
+                        <br/>
                         <img className="img-thumbnail" src ={this.props.projectDetail.screenshots[0]["main"]}/>
+                        <img className="img-thumbnail" src ={this.props.projectDetail.screenshots[0]["other_visuals2"]}/>
+                        <img className="img-thumbnail" src ={this.props.projectDetail.screenshots[0]["other_visuals"]}/>
+
 
                     </ModalBody>
                     <ModalFooter>
                         <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                        <Button color="secondary" onClick={this.toggle}>Close</Button>
                     </ModalFooter>
                 </Modal>
             </div>
