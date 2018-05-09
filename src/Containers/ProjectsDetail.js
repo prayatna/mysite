@@ -9,7 +9,7 @@ import nutrimain2 from '../assets/img/nutrimain2.png';
 
 
 
-
+//TODO: get project details along with pictures from backend
 
 
 export default{
