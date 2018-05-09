@@ -2,6 +2,7 @@ import pte from '../assets/img/pte.png';
 import dashboard from '../assets/img/dash-weather.png';
 import cbr from '../assets/img/cbr.png';
 import fileportalDash from '../assets/img/fileportalDash.png';
+import fileportal2 from '../assets/img/fileportal2.png';
 import nutri from '../assets/img/nutri.png';
 import moreapp from '../assets/img/moreapp.png';
 import morenutri from '../assets/img/morenutri.png';
@@ -70,7 +71,9 @@ export default{
             id:4,
             title: "My Shopping List",
             description: "basic  Android app to add/remove shopping list item",
-            more_info: "more explanation about the project",
+            more_info: "This basic Android application uses CRUD methods. It has taken an approach of basic To-DO list app which has similar features" +
+            "In shopping list app, you can add or create, update, delete an item as shown in the screenshots. This project was built for basic understanding" +
+            "of android application development during my university study.",
             screenshots:[{
                 main: shoplist1,
                 other_visuals: shoplist2
@@ -84,10 +87,12 @@ export default{
             id:5,
             title: "File Portal",
             description: "a file sharing web application made using Laravel framework",
-            more_info: "more explanation about the project",
+            more_info: "a web app built using Laravel for PHP as one of my university project. This application has basic authentication which lets user register and login" +
+            "Roles can be added so that only specific type of users are allowed to share/download/upload the file. The file system uses basic CRUD methods. The application" +
+            "is styled using bootstrap.",
             screenshots:[{
                 main: fileportalDash,
-                other_visuals: cbr
+                other_visuals: fileportal2
             }],
             offsetVal: 0
 

@@ -40,7 +40,7 @@ class Project extends Component {
                     <ModalHeader toggle={this.toggle}>{this.props.projectDetail.title}</ModalHeader>
                     <ModalBody>
                         {this.props.projectDetail.more_info}
-                        <br/>
+                        <br/><br/>
                         <Col md="12">
                             <img className="img-thumbnail" src={this.props.projectDetail.screenshots[0]["main"]}/>
                             {main2}
