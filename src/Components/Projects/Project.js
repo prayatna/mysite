@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {Button, Modal, ModalHeader, ModalBody, ModalFooter, Col} from 'reactstrap';
 
 class Project extends Component {
     constructor(props) {
@@ -18,6 +18,21 @@ class Project extends Component {
     }
 
     render() {
+        let main2 = '';
+        let otherVisuals = '';
+        let otherVisuals2 = '';
+        if (this.props.projectDetail.screenshots[0]["main2"]) {
+            main2 = <img className="img-thumbnail" src={this.props.projectDetail.screenshots[0]["main2"]}/>
+        }
+        if(this.props.projectDetail.screenshots[0]["other_visuals2"]){
+            otherVisuals2 =<img className="img-thumbnail" src={this.props.projectDetail.screenshots[0]["other_visuals2"]}/>
+        }
+
+        if(this.props.projectDetail.screenshots[0]["other_visuals"]){
+            otherVisuals =<img className="img-thumbnail" src={this.props.projectDetail.screenshots[0]["other_visuals"]}/>
+
+        }
+
         return (
             <div>
                 <Button color="primary" onClick={this.toggle}>{this.props.buttonLabel}Read more</Button>
@@ -25,11 +40,18 @@ class Project extends Component {
                     <ModalHeader toggle={this.toggle}>{this.props.projectDetail.title}</ModalHeader>
                     <ModalBody>
                         {this.props.projectDetail.more_info}
-                        <img className="img-thumbnail" src ={this.props.projectDetail.screenshots}/>
+                        <br/><br/>
+                        <Col md="12">
+                            <img className="img-thumbnail" src={this.props.projectDetail.screenshots[0]["main"]}/>
+                            {main2}
+                        </Col>
+                        {otherVisuals2}
+                        {otherVisuals}
+
                     </ModalBody>
                     <ModalFooter>
                         <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                        <Button color="secondary" onClick={this.toggle}>Close</Button>
                     </ModalFooter>
                 </Modal>
             </div>
