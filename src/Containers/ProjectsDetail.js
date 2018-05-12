@@ -66,7 +66,7 @@ export default{
                 other_visuals2:morenutri
             }],
             demo:"",
-            sourceCode:""
+            sourceCode:"https://github.com/prayatna/NutriFinder"
 
         },
 
@@ -82,7 +82,7 @@ export default{
                 other_visuals: shoplist2
             }],
             demo:"",
-            sourceCode:""
+            sourceCode:"https://github.com/prayatna/MyShoppingList"
 
 
         },
