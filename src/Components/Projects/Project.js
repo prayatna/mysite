@@ -78,7 +78,6 @@ class Project extends Component {
 
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
                         <Button color="secondary" onClick={this.toggle}>Close</Button>
                     </ModalFooter>
                 </Modal>
