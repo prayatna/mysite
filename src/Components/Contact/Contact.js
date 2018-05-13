@@ -48,9 +48,9 @@ class Contact extends Component{
 
     render(){
         return(
-            <div>
+            <div className="body-col">
                     {console.log(this.state.alert,"outsite successc ompnent")}
-                    <Success alert = {this.state.alert}/>
+                    {/*<Success alert = {this.state.alert}/>*/}
                     <div className="display-image" >
                         <img src={dp} alt="dp"/>
                     </div>
