@@ -30,7 +30,8 @@ export default{
                 main: dashboard,
                 other_visuals: cbr
             }],
-            offsetVal: 0
+            demo:"https://bom-project.herokuapp.com/",
+            sourceCode:"https://github.com/prayatna/bom-proj"
 
         },
         {
@@ -44,7 +45,8 @@ export default{
             screenshots:[{
                 main: pte,
             }],
-            offsetVal: 2
+            demo:"",
+            sourceCode:"https://github.com/prayatna/pte_admin"
 
         },
 
@@ -63,7 +65,8 @@ export default{
                 other_visuals: moreapp,
                 other_visuals2:morenutri
             }],
-            offsetVal: 0
+            demo:"",
+            sourceCode:"https://github.com/prayatna/NutriFinder"
 
         },
 
@@ -78,7 +81,8 @@ export default{
                 main: shoplist1,
                 other_visuals: shoplist2
             }],
-            offsetVal: 2
+            demo:"",
+            sourceCode:"https://github.com/prayatna/MyShoppingList"
 
 
         },
@@ -94,7 +98,8 @@ export default{
                 main: fileportalDash,
                 other_visuals: fileportal2
             }],
-            offsetVal: 0
+            demo:"",
+            sourceCode:""
 
         }
     ]
