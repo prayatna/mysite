@@ -80,15 +80,13 @@ class Contact extends Component {
     }
 
     render() {
-        let banner = '';
+        let alertBanner = '';
         if(this.state.sentMessageAlert.hasValue){
-             banner = <Success alert = {this.state.sentMessageAlert}/>
+             alertBanner = <Success alert = {this.state.sentMessageAlert}/>
         }
         return (
             <div className="body-col">
-                {/*{console.log(this.state.alert, "outsite successc ompnent")}*/}
-                { console.log(this.state.sentMessageAlert)}
-                {banner}
+                {alertBanner}
                 <div className="display-image">
                     <img src={dp} alt="dp"/>
                 </div>
