@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './Contact.css';
 import dp from '../../assets/img/dp.jpg';
-import {Col, Card, CardHeader, CardBody, Button, Form, FormGroup, Label, Input, Alert, FormFeedback} from 'reactstrap';
+import {Col, Card, CardHeader, CardBody, Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import axios from 'axios';
 import Success from './Success';
 
@@ -59,7 +59,19 @@ class Contact extends Component {
                 });
             }
             return response
-        });
+        })
+            .catch(error=>{
+                this.setState({
+                    ...this.state,
+                    sentMessageAlert: {
+                        showSuccess: false,
+                        showFailed: true,
+                        hasValue: true
+                    }
+
+                });
+                console.log(error)
+            });
         //TODO: handle more appropriately
     };
 
