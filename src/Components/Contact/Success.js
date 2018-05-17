@@ -5,7 +5,7 @@ const success = ({alert}) => {
     if(alert.showSuccess){
         return <div>
             <Alert color="info">
-                Your message has been sent successfully
+                Success!! Your message has been sent.
             </Alert>
         </div>
     }

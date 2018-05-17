@@ -5,21 +5,20 @@ import {Col, Card, CardHeader, CardBody, Button, Form, FormGroup, Label, Input, 
 import axios from 'axios';
 import Success from './Success';
 
-
 class Contact extends Component {
-
-    state = {
-        name: '',
-        email: '',
-        message: '',
-        sentMessageAlert: {
-            hasValue: false,
-            showSuccess: false,
-            showFailed: false,
-        }
-
-    };
-
+    constructor() {
+        super();
+        this.state = {
+            name: '',
+            email: '',
+            message: '',
+            sentMessageAlert: {
+                hasValue: false,
+                showSuccess: false,
+                showFailed: false,
+            }
+        };
+    }
 
     handleChange = (e) => {
         this.setState({
@@ -27,20 +26,20 @@ class Contact extends Component {
         });
     };
 
-    handleSubmit(e){
+    handleSubmit= (e) => {
         e.preventDefault();
         const {name, email, message} = this.state;
-       axios.post('https://mysite-back.herokuapp.com/api/email', {
+        axios.post('https://mysite-back.herokuapp.com/api/email', {
             name,
             email,
             message
         }).then(response => {
             if (response.data.success === 'true') {
                 this.setState({
-                    name:'',
-                    email:'',
-                    message:'',
-                    sentMessageAlert:{
+                    name: '',
+                    email: '',
+                    message: '',
+                    sentMessageAlert: {
                         showSuccess: true,
                         showFailed: false,
                         hasValue: true
@@ -48,10 +47,10 @@ class Contact extends Component {
 
                 });
             }
-            else{
+            else {
                 this.setState({
                     ...this.state,
-                    sentMessageAlert:{
+                    sentMessageAlert: {
                         showSuccess: false,
                         showFailed: true,
                         hasValue: true
@@ -59,30 +58,32 @@ class Contact extends Component {
 
                 });
             }
-            console.log(this.state);
             return response
         });
         //TODO: handle more appropriately
-        //clear form values
+    };
 
-
-        //clear form values
-        // this.setState({
-        //     emailData: {
-        //         name: '',
-        //         email: '',
-        //         message: ''
-        //     },
-        //
-        // })
-
-
+    //timer for alert banner
+    drawAlert() {
+        setTimeout(() => {
+            this.setState({
+                ...this.state,
+                sentMessageAlert:{
+                    hasValue: false,
+                    showSuccess: false,
+                    showFailed: false
+                }})
+        }, 4000); // show alert banner for just 4 seconds
+        return (
+            <Success alert={this.state.sentMessageAlert} />
+        )
     }
 
     render() {
         let alertBanner = '';
-        if(this.state.sentMessageAlert.hasValue){
-             alertBanner = <Success alert = {this.state.sentMessageAlert}/>
+        if (this.state.sentMessageAlert.hasValue) {
+            alertBanner = <Success alert={this.state.sentMessageAlert}/>;
+            this.drawAlert();
         }
         return (
             <div className="body-col">
@@ -96,7 +97,7 @@ class Contact extends Component {
                     <Card>
                         <CardHeader tag="h3">Get in touch!</CardHeader>
                         <CardBody>
-                            <Form onSubmit={this.handleSubmit.bind(this)}>
+                            <Form onSubmit={this.handleSubmit}>
                                 <FormGroup row>
                                     <Label for="name" sm={2}>Name:</Label>
                                     <Col sm={10}>
@@ -109,7 +110,7 @@ class Contact extends Component {
                                     <Label for="exampleEmail" sm={2}>Email:</Label>
                                     <Col sm={10}>
                                         <Input type="email" name="email" placeholder="Email"
-                                               onChange={this.handleChange} />
+                                               onChange={this.handleChange}/>
                                     </Col>
                                 </FormGroup>
 
