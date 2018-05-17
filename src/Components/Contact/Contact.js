@@ -9,13 +9,15 @@ import Success from './Success';
 class Contact extends Component {
 
     state = {
-        emailData:{
         name: '',
         email: '',
-        message: ''
-        },
-        alert: false,
-        formInvalid: false
+        message: '',
+        sentMessageAlert: {
+            hasValue: false,
+            showSuccess: false,
+            showFailed: false,
+        }
+
     };
 
 
@@ -25,78 +27,70 @@ class Contact extends Component {
         });
     };
 
-    handleSubmit = (e) => {
+    handleSubmit(e){
         e.preventDefault();
-        const invalid =this.validation();
-        if(!invalid){
-            this.postRequest();
-        }
-        console.log(this.state.nameError);
-    };
-
-    validation() {
         const {name, email, message} = this.state;
-        let errors = {};
-        let invalid = false;
+       axios.post('https://mysite-back.herokuapp.com/api/email', {
+            name,
+            email,
+            message
+        }).then(response => {
+            if (response.data.success === 'true') {
+                this.setState({
+                    name:'',
+                    email:'',
+                    message:'',
+                    sentMessageAlert:{
+                        showSuccess: true,
+                        showFailed: false,
+                        hasValue: true
+                    }
 
-        //For name validation
-        if(typeof name === 'undefined'){
-            invalid = true;
-            errors.nameError = "Please put your name so I can get to know you";
-        }
-        else if(name.length < 3){
-            invalid = true;
-            errors.nameError = "Name must be at least 3 character long";
-        }
-        this.setState({
-            ...this.state,
-            nameError: errors.nameError,
-            formInvalid: true
+                });
+            }
+            else{
+                this.setState({
+                    ...this.state,
+                    sentMessageAlert:{
+                        showSuccess: false,
+                        showFailed: true,
+                        hasValue: true
+                    }
+
+                });
+            }
+            console.log(this.state);
+            return response
         });
+        //TODO: handle more appropriately
+        //clear form values
 
-        return invalid;
-
-    }
-
-
-      postRequest() {
-          const {name, email, message} = this.state;
-          const form = axios.post('https://mysite-back.herokuapp.com/api/email', {
-              name,
-              email,
-              message
-          }).then(function (response) {
-              console.log(response);
-              return response
-          });
-          //TODO: handle more appropriately
-          // if (form.data.success = 'true') {
-          //     this.setState({
-          //         ...this.emailData,
-          //         alert: true
-          //     })
-      // }
 
         //clear form values
-        this.setState({
-            emailData: {
-                name: '',
-                email: '',
-                message: ''
-            },
-            nameError: '',
-            emailError: '',
-            messageError: ''
-        })
+        // this.setState({
+        //     emailData: {
+        //         name: '',
+        //         email: '',
+        //         message: ''
+        //     },
+        //
+        // })
+
+
     }
 
     render() {
+        let banner = '';
+        if(this.state.sentMessageAlert.hasValue){
+             banner = <Success alert = {this.state.sentMessageAlert}/>
+        }
         return (
             <div className="body-col">
                 {/*{console.log(this.state.alert, "outsite successc ompnent")}*/}
-                {/*<Success alert = {this.state.alert}/>*/}
+                { console.log(this.state.sentMessageAlert)}
+                {banner}
                 <div className="display-image">
-                    {/*<img src={dp} alt="dp"/>*/}
+                    <img src={dp} alt="dp"/>
                 </div>
 
 
@@ -109,9 +103,7 @@ class Contact extends Component {
                                     <Label for="name" sm={2}>Name:</Label>
                                     <Col sm={10}>
                                         <Input type="name" name="name" placeholder="Your awesome name"
-                                               invalid = {this.state.formInvalid} valid ={!this.state.formInvalid}
                                                onChange={this.handleChange}/>
-                                        <FormFeedback>{this.state.nameError}</FormFeedback>
                                     </Col>
                                 </FormGroup>
 
@@ -119,8 +111,7 @@ class Contact extends Component {
                                     <Label for="exampleEmail" sm={2}>Email:</Label>
                                     <Col sm={10}>
                                         <Input type="email" name="email" placeholder="Email"
-                                               onChange={this.handleChange} invalid/>
-                                        <FormFeedback>{this.state.emailError}</FormFeedback>
+                                               onChange={this.handleChange} />
                                     </Col>
                                 </FormGroup>
 
