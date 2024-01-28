@@ -1,31 +1,24 @@
 {
   "name": "mysite",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.4",
-    "@fortawesome/fontawesome-free-brands": "^5.0.8",
-    "@fortawesome/fontawesome-free-regular": "^5.0.8",
-    "@fortawesome/fontawesome-free-solid": "^5.0.8",
-    "@fortawesome/react-fontawesome": "0.0.17",
-    "axios": "^0.18.0",
-    "bootstrap": "^4.0.0",
-    "react": "^16.3.1",
-    "react-dom": "^16.2.0",
-    "react-inview-monitor": "^2.2.0",
-    "react-particles-js": "^2.1.1",
-    "react-reveal": "^1.2.1",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1",
-    "react-vertical-timeline-component": "^2.0.6",
-    "react-waypoint": "^8.0.1",
-    "reactstrap": "^5.0.0-beta.2",
-    "webfontloader": "^1.6.28"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build:11ty": "npx @11ty/eleventy",
+    "watch:11ty": "npx @11ty/eleventy --serve",
+    "dev": "DEBUG=Eleventy* npx @11ty/eleventy --serve",
+    "cms": "npx tinacms dev -c \"npm run dev\""
+  },
+  "dependencies": {
+    "tinacms": "^1.5.28"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-bundle": "^1.0.5",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@tinacms/cli": "^1.5.39",
+    "@types/node": "^20.11.7",
+    "luxon": "^3.4.4",
+    "markdown-it-anchor": "^8.6.7"
   }
 }
