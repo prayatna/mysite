@@ -5,18 +5,13 @@
   "scripts": {
     "build:11ty": "npx @11ty/eleventy",
     "watch:11ty": "npx @11ty/eleventy --serve",
-    "dev": "DEBUG=Eleventy* npx @11ty/eleventy --serve",
-    "cms": "npx tinacms dev -c \"npm run dev\""
-  },
-  "dependencies": {
-    "tinacms": "^1.5.28"
+    "dev": "DEBUG=Eleventy* npx @11ty/eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-bundle": "^1.0.5",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@tinacms/cli": "^1.5.39",
     "@types/node": "^20.11.7",
     "luxon": "^3.4.4",
     "markdown-it-anchor": "^8.6.7"
