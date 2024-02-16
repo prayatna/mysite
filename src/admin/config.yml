@@ -2,7 +2,7 @@ backend:
   name: github
   branch: main
   repo: prayatna/mysite
-  base_url: https://windy-intermediate-server.glitch.me/
+  base_url: https://mysite-oauth.onrender.com
 media_folder: "public/assets/images" 
 public_folder: "assets/images"
 collections:
