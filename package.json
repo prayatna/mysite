@@ -1,19 +1,14 @@
 {
   "name": "mysite",
   "version": "2.0.0",
-  "private": true,
+  "description": "Prayatna's personal site",
   "scripts": {
-    "build:11ty": "npx @11ty/eleventy",
-    "watch:11ty": "npx @11ty/eleventy --serve",
-    "dev": "DEBUG=Eleventy* npx @11ty/eleventy --serve"
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
+  "author": "Prayatna Bhattarai",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-bundle": "^1.0.5",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@types/node": "^20.11.7",
-    "luxon": "^3.4.4",
-    "markdown-it-anchor": "^8.6.7"
+    "prettier": "^3.2.4"
   }
 }
