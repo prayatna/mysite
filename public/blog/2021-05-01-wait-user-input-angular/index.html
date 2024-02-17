@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700..900&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="/style.css">
+
+    <title>How to wait after user input in Angular forms</title>
+</head>
+<body>
+    
+<header class="page-header">
+  <div class="container">
+    <div class="page-header__content">
+      <div>
+       <a href="/"> <img src="../assets/favicon.ico"/></a>
+      </div>
+      <nav>
+        <ul role="list" class="nav-list flex-group">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/blog/">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+    <main>
+    
+<article class="main-article">
+    <div class="container container--narrow flow">
+        <h1 class="article-title">
+            How to wait after user input in Angular forms
+        </h1>
+        <figure class="main-article__figure">
+            <img src="/assets/blog/article-1.jpg" alt="Angular forms">
+            <figcaption>
+                Angular forms
+            </figcaption>
+        </figure>
+        
+        <p>Welcome to the very first post on my blog. I am taking all my dev.to posts to my own space because why not? I wanted to use my domain so I decided to host my static content here :).</p>
+<p>Let's get straight to the point. I was trying to extract a url from the user input and get a web preview on the fly. I could only get that once I figure out the user has stopped typing. So I wanted to add a delay just before I execute my method to extract the url from the input text.</p>
+<p>I have my <code>PostMessageComponent</code> like:</p>
+<pre><code>@Component({
+	selector: 'post-message',
+	templateUrl: './post-message.component.html',	
+})
+export class PostMessageComponent implements OnInit, OnDestroy {
+  message = new FormControl('');
+  webLink: string;
+  
+  messageSubscription: Subscription;
+  constructor() { }
+  ngOnInit() {
+	this.messageSubscription = 
+        this.message.valueChanges.pipe(
+	  debounceTime(2000),
+	  distinctUntilChanged()
+          ).subscribe(newMessage =&gt; {
+		this.webLink = 
+                    this.getUrlFromString(newMessage);
+	  });
+    }
+
+  ngOnDestroy(): void {
+    this.messageSubscription.unsubscribe();
+  }
+
+</code></pre>
+<p>I created a message <code>FormControl</code> which has valueChanges as Observable. Through RxJs you can always use <code>.pipe()</code> function to run operators one after the other. In this case, I used the <code>debounceTime(2000)</code> which emits the observable after 2s has passed. After the function is executed it runs <code>distinctUntilChanged()</code> which basically is another function that emits all the items the source Observable will emit only if the value is different from the previous one.</p>
+<p>This way, I can now use <code>getUrlFromString</code> method after waiting for 2s from the time the user finishes typing. I then use <code>this.webLink</code> to call an external service/api and perform other actions.</p>
+<p>There could be a better way of solving this, but this is how I tried to solve it. Happy to get everyone's thoughts on it.</p>
+<p>PS: If you are subscribing to something, don't forget to unsubscribe. That's why I have a <code>messageSubscription</code> which calls the <code>unsubscribe()</code> once the component is destroyed.</p>
+
+    </div>
+</article>
+    </main>
+    <footer class="site-footer">
+  <p>© 2024 Made with <span style="font-size:100%;color:red;">&hearts;</span> by Prayatna</p>
+</p>
+</footer>
+</body>
+</html>
