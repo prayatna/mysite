@@ -1,19 +1,51 @@
 ---
-title: My First Article
-author: Kevin Powell
-date: 2021-05-01
+title: How to wait after user input in Angular forms
+author: Prayatna Bhattarai
+date: 2021-10-20
 tags: ["post", "featured"]
 image: /assets/blog/article-1.jpg
-imageAlt: This is a test
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?
+imageAlt: Angular forms
+description: 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel. Donec ultrices tincidunt arcu non sodales. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Pretium quam vulputate dignissim suspendisse in est. Lobortis mattis aliquam faucibus purus in massa tempor nec. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Vulputate eu scelerisque felis imperdiet proin. Nisl nisi scelerisque eu ultrices.
+Welcome to the very first post on my blog. I am taking all my dev.to posts to my own space because why not? I wanted to use my domain so I decided to host my static content here :).
 
-Enim nulla aliquet porttitor lacus luctus accumsan. Vulputate mi sit amet mauris commodo quis. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Placerat orci nulla pellentesque dignissim. Consequat mauris nunc congue nisi. Nec nam aliquam sem et tortor consequat. Consequat semper viverra nam libero justo laoreet sit amet. Id interdum velit laoreet id donec. Turpis in eu mi bibendum neque. Tincidunt vitae semper quis lectus. Suscipit adipiscing bibendum est ultricies integer quis auctor. Posuere urna nec tincidunt praesent semper. Sagittis id consectetur purus ut faucibus pulvinar elementum. Diam maecenas ultricies mi eget mauris. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Dui sapien eget mi proin sed.
+Let's get straight to the point. I was trying to extract a url from the user input and get a web preview on the fly. I could only get that once I figure out the user has stopped typing. So I wanted to add a delay just before I execute my method to extract the url from the input text.
 
-In iaculis nunc sed augue lacus. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. Consectetur adipiscing elit ut aliquam. Tortor consequat id porta nibh venenatis cras sed. Integer enim neque volutpat ac tincidunt. Pellentesque pulvinar pellentesque habitant morbi. Ut enim blandit volutpat maecenas. Risus quis varius quam quisque id. Turpis tincidunt id aliquet risus. Congue eu consequat ac felis donec.
+I have my `PostMessageComponent` like:
 
-Aliquam vestibulum morbi blandit cursus risus at. Malesuada fames ac turpis egestas sed tempus. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus. Enim diam vulputate ut pharetra sit amet aliquam. Est ante in nibh mauris cursus mattis. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Nec ultrices dui sapien eget mi proin sed libero enim. Sed sed risus pretium quam vulputate. Sit amet luctus venenatis lectus magna.
+```
+@Component({
+	selector: 'post-message',
+	templateUrl: './post-message.component.html',	
+})
+export class PostMessageComponent implements OnInit, OnDestroy {
+  message = new FormControl('');
+  webLink: string;
+  
+  messageSubscription: Subscription;
+  constructor() { }
+  ngOnInit() {
+	this.messageSubscription = 
+        this.message.valueChanges.pipe(
+	  debounceTime(2000),
+	  distinctUntilChanged()
+          ).subscribe(newMessage => {
+		this.webLink = 
+                    this.getUrlFromString(newMessage);
+	  });
+    }
 
-Mauris nunc congue nisi vitae suscipit tellus mauris. Vitae et leo duis ut. Arcu cursus euismod quis viverra nibh. Amet mauris commodo quis imperdiet. Condimentum lacinia quis vel eros donec. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Faucibus nisl tincidunt eget nullam. Cursus metus aliquam eleifend mi in nulla. Ut placerat orci nulla pellentesque dignissim enim sit amet. Lobortis feugiat vivamus at augue eget arcu dictum. Nunc faucibus a pellentesque sit amet porttitor. Quis varius quam quisque id diam vel quam elementum pulvinar.
+  ngOnDestroy(): void {
+    this.messageSubscription.unsubscribe();
+  }
+
+```
+
+I created a message `FormControl` which has valueChanges as Observable. Through RxJs you can always use `.pipe()` function to run operators one after the other. In this case, I used the `debounceTime(2000)` which emits the observable after 2s has passed. After the function is executed it runs `distinctUntilChanged()` which basically is another function that emits all the items the source Observable will emit only if the value is different from the previous one.
+
+This way, I can now use `getUrlFromString` method after waiting for 2s from the time the user finishes typing. I then use `this.webLink` to call an external service/api and perform other actions.
+
+There could be a better way of solving this, but this is how I tried to solve it. Happy to get everyone's thoughts on it.
+
+PS: If you are subscribing to something, don't forget to unsubscribe. That's why I have a `messageSubscription` which calls the `unsubscribe()` once the component is destroyed.
