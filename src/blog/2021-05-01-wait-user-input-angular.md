@@ -14,7 +14,7 @@ Let's get straight to the point. I was trying to extract a url from the user inp
 
 I have my `PostMessageComponent` like:
 
-```
+``` js
 @Component({
 	selector: 'post-message',
 	templateUrl: './post-message.component.html',	
