@@ -1,4 +1,8 @@
-:root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
   --fs-300: 0.9375rem;
   --fs-400: 1.0625rem;
   --fs-500: 1.375rem;
@@ -39,14 +43,14 @@
   /////////////////////// */
 
 /* Box sizing rules */
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
+} */
 
 /* Remove default margin */
-body,
+/* body,
 h1,
 h2,
 h3,
@@ -57,50 +61,50 @@ blockquote,
 dl,
 dd {
   margin: 0;
-}
+} */
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul:where([role="list"]),
+/* ul:where([role="list"]),
 ol:where([role="list"]) {
   list-style: none;
   margin: 0;
   padding: 0;
-}
+} */
 
 /* Set core root defaults */
-html:focus-within {
+/* html:focus-within {
   scroll-behavior: smooth;
-}
+} */
 
 /* Set core body defaults */
-body {
+/* body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-}
+} */
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
+/* a:not([class]) {
   text-decoration-skip-ink: auto;
-}
+} */
 
 /* Make images easier to work with */
-img,
+/* img,
 picture {
   max-width: 100%;
   display: block;
-}
+} */
 
 /* Inherit fonts for inputs and buttons */
-input,
+/* input,
 button,
 textarea,
 select {
   font: inherit;
-}
+} */
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
   }
@@ -113,13 +117,13 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
+} */
 
 /* //////////////////////
   General styling
   /////////////////////// */
 
-body {
+/* body {
   font-family: var(--ff-body);
   font-size: var(--fs-400);
   color: var(--clr-neutral-900);
@@ -140,7 +144,7 @@ strong {
 section,
 .section {
   padding: min(10vh, 10em) 0;
-}
+} */
 
 
 
@@ -152,7 +156,7 @@ section,
    and add margin to the top for proper
    spacing */
 
-.flow > *:where(:not(:first-child)) {
+/* .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-spacer, 1em);
 }
 
@@ -174,11 +178,11 @@ section,
 
 .text-center {
   text-align: center;
-}
+} */
 
 /* typgraphy */
 
-.article-title,
+/* .article-title,
 .section-title {
   color: var(--clr-primary-500);
 }
@@ -189,14 +193,14 @@ section,
 
 .section-title {
   font-size: var(--fs-600);
-}
+} */
 
 
 /* //////////////////////
   Header
   /////////////////////// */
 
-.page-header {
+/* .page-header {
   padding: 2em 0;
 }
 
@@ -219,25 +223,25 @@ section,
 .nav-list a:hover {
   color: var(--clr-primary-400);
   text-decoration: underline;
-}
+} */
 
 /* //////////////////////
   Footer
   /////////////////////// */
 
-.site-footer {
+/* .site-footer {
   --logo-color: currentColor;
   padding: 2em 0;
   color: var(--clr-neutral-100);
   background-color: var(--clr-primary-500);
   text-align: center;
-}
+} */
 
 /* //////////////////////
   Homepage
   /////////////////////// */
 
-.hero > div {
+/* .hero > div {
   display: grid;
   grid-auto-flow: row;
   grid-auto-columns: 1fr;
@@ -248,10 +252,10 @@ section,
 .hero__image {
   width: 100%;
   /* max-height: max(15rem, 40vh); */
-  object-fit: cover;
-}
+  /* object-fit: cover;
+} */
 
-@media (min-width: 45em) {
+/* @media (min-width: 45em) {
   .hero > div {
     grid-auto-flow: column;
   }
@@ -259,17 +263,17 @@ section,
 
 .featured-articles {
   background-color: var(--clr-primary-200);
-}
+} */
 
-.articles__list {
+/* .articles__list {
   --flow-spacer: 3rem;
   margin: 6rem 0;
-}
+} */ 
 
 /* //////////////////////
   Individual article page
   /////////////////////// */
-
+/* 
   .main-article {
     margin-bottom: 3rem;
   }
@@ -278,13 +282,13 @@ section,
     margin: 1rem 0;
     font-size: var(--fs-300);
     opacity: .9;
-  }
+  } */
 
 /* //////////////////////
   Article snippets
   /////////////////////// */
 
-.snippet {
+/* .snippet {
   display: grid;
   gap: 1em;
   grid-template-areas:
@@ -384,4 +388,4 @@ section,
 .btn--neutral:focus {
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
-}
+}  */

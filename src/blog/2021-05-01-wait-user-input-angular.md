@@ -26,15 +26,14 @@ export class PostMessageComponent implements OnInit, OnDestroy {
   messageSubscription: Subscription;
   constructor() { }
   ngOnInit() {
-	this.messageSubscription = 
+	  this.messageSubscription = 
         this.message.valueChanges.pipe(
-	  debounceTime(2000),
-	  distinctUntilChanged()
+	        debounceTime(2000),
+	        distinctUntilChanged()
           ).subscribe(newMessage => {
-		this.webLink = 
-                    this.getUrlFromString(newMessage);
-	  });
-    }
+		      this.webLink = this.getUrlFromString(newMessage);
+	      });
+  }
 
   ngOnDestroy(): void {
     this.messageSubscription.unsubscribe();
