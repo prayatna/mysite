@@ -5,17 +5,17 @@
   --fs-600: 1.875rem;
   --fs-700: 2rem;
 
-  --ff-body: "Roboto", sans-serif;
-  --ff-heading: "Playfair Display", serif;
+  --ff-body: "Nunito", sans-serif;
+  --ff-heading: "Fredoka", serif;
 
   --fw-400: 400;
   --fw-700: 700;
   --fw-900: 900;
 
-  --clr-primary-200: hsla(169, 70%, 95%, 1);
-  --clr-primary-300: hsla(169, 100%, 39%, 1);
-  --clr-primary-400: hsla(169, 100%, 26%, 1);
-  --clr-primary-500: hsla(169, 100%, 16%, 1);
+  --clr-primary-200: hsl(229, 19%, 52%, 1);
+  --clr-primary-300: hsl(229, 19%, 40%, 1);
+  --clr-primary-400: hsl(228, 19%, 32%, 1);
+  --clr-primary-500: hsl(229, 19%, 22%, 1);
 
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
   --clr-neutral-300: hsla(0, 0%, 50%, 1);
