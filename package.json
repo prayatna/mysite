@@ -1,31 +1,30 @@
 {
   "name": "mysite",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.4",
-    "@fortawesome/fontawesome-free-brands": "^5.0.8",
-    "@fortawesome/fontawesome-free-regular": "^5.0.8",
-    "@fortawesome/fontawesome-free-solid": "^5.0.8",
-    "@fortawesome/react-fontawesome": "0.0.17",
-    "axios": "^0.18.0",
-    "bootstrap": "^4.0.0",
-    "react": "^16.3.1",
-    "react-dom": "^16.2.0",
-    "react-inview-monitor": "^2.2.0",
-    "react-particles-js": "^2.1.1",
-    "react-reveal": "^1.2.1",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.1",
-    "react-vertical-timeline-component": "^2.0.6",
-    "react-waypoint": "^8.0.1",
-    "reactstrap": "^5.0.0-beta.2",
-    "webfontloader": "^1.6.28"
+    "gray-matter": "^4.0.3",
+    "next": "14.2.7",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.7",
+    "new-component": "^5.0.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "new-component": "new-component"
   }
 }
