@@ -2,14 +2,14 @@ import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
 
-interface Frontmatter {
+export interface Frontmatter {
   title: string;
   description: string;
   publishedOn: string;
   [key: string]: any; // for any additional properties
 }
 
-interface BlogPost {
+export interface BlogPost {
   slug: string;
   title: string;
   description: string;
