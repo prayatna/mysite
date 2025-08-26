@@ -194,8 +194,13 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center animate-fade-in">
-            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary-500 to-indigo-600 flex items-center justify-center">
-              <User className="text-white text-4xl" data-testid="hero-avatar" />
+            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-primary-500 to-indigo-600 flex items-center justify-center overflow-hidden">
+              <img
+                src="/dp_avt.jpeg"
+                alt="Prayatna avatar"
+                className="w-full h-full object-cover"
+                data-testid="hero-avatar"
+              />
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-indigo-600 bg-clip-text text-transparent">
