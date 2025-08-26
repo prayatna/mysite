@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "async-pipe-angular",
+    "title": "TIL: How to use async | pipe in Angular",
+    "excerpt": "Learn how to simplify Angular components by using the async pipe to handle observables directly in templates...",
+    "date": "October 23, 2020",
+    "readTime": "3 min read",
+    "tags": ["Angular", "Async Pipe", "Observables", "Best Practices"],
+    "author": "Prayatna Bhattarai"
+  },
+  {
+    "slug": "wait-user-input-angular-forms",
+    "title": "TIL: How to wait after user input in Angular forms",
+    "excerpt": "Learn how to use RxJS operators like debounceTime and distinctUntilChanged with Angular's FormControl to delay execution after user input. Tips on unsubscribing to prevent memory leaks...",
+    "date": "October 21, 2020",
+    "readTime": "2 min read",
+    "tags": ["Angular", "Reactive Forms", "TIL"],
+    "author": "Prayatna Bhattarai"
+  },
+  {
+    "slug": "pass-data-to-child-angular",
+    "title": "TIL: How to pass data to child component on a hybrid Angular project",
+    "excerpt": "Learn how to pass data from an AngularJS parent component to an Angular child component in a hybrid Angular project including using @Input...",
+    "date": "October 22, 2020",
+    "readTime": "3 min read",
+    "tags": ["Angular", "AngularJS", "Hybrid", "Input", "downgradeComponent"],
+    "author": "Prayatna Bhattarai"
+  }
+]
