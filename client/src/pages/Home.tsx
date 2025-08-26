@@ -231,14 +231,14 @@ export default function Home() {
 
             <div className="flex justify-center space-x-6">
               <a
-                href="https://github.com"
+                href="https://github.com/prayatna"
                 className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-2xl"
                 data-testid="link-github"
               >
                 <Github />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/prayatnabhattarai/"
                 className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-2xl"
                 data-testid="link-linkedin"
               >
@@ -250,13 +250,6 @@ export default function Home() {
                 data-testid="link-twitter"
               >
                 <Twitter />
-              </a>
-              <a
-                href="mailto:alex.chen@email.com"
-                className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-2xl"
-                data-testid="link-email"
-              >
-                <Mail />
               </a>
             </div>
           </div>

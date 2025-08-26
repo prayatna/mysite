@@ -200,7 +200,7 @@ export default function BlogPostPage() {
                     className="text-sm text-gray-600 dark:text-gray-300"
                     data-testid="author-title"
                   >
-                    Senior Software Engineer
+                    Software Engineer
                   </p>
                 </div>
               </div>
