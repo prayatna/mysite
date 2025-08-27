@@ -506,17 +506,6 @@ export default function Home() {
                 <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Mail className="text-primary-600 dark:text-primary-400" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-                    Email
-                  </h3>
-                  <p
-                    className="text-gray-600 dark:text-gray-300"
-                    data-testid="contact-email"
-                  >
-                    alex.chen@email.com
-                  </p>
-                </div>
               </div>
 
               <div className="flex items-start space-x-4">
@@ -531,7 +520,7 @@ export default function Home() {
                     className="text-gray-600 dark:text-gray-300"
                     data-testid="contact-linkedin"
                   >
-                    linkedin.com/in/alexchen
+                    linkedin.com/in/prayatnabhattarai
                   </p>
                 </div>
               </div>
@@ -548,7 +537,7 @@ export default function Home() {
                     className="text-gray-600 dark:text-gray-300"
                     data-testid="contact-github"
                   >
-                    github.com/alexchen
+                    github.com/prayatna
                   </p>
                 </div>
               </div>
@@ -565,7 +554,7 @@ export default function Home() {
                     className="text-gray-600 dark:text-gray-300"
                     data-testid="contact-location"
                   >
-                    San Francisco, CA
+                    Australia
                   </p>
                 </div>
               </div>
@@ -703,7 +692,7 @@ export default function Home() {
                   <Twitter className="text-xl" />
                 </a>
                 <a
-                  href="mailto:alex.chen@email.com"
+                  href="mailto:praytana.student+mysite@gmail.com"
                   className="text-gray-400 hover:text-primary-400 transition-colors"
                   data-testid="footer-email"
                 >
